@@ -4,20 +4,21 @@
 # print("Hello " + input("What is your name?") + "!")
 
 
-# Write a program that prints the number of characters in a user's name.
-# You might need to Google for a function that calculates the length of a string.
-# Ex input Angela
-#     output 6
-# Answer print( len( input("What is your name?") ) )
+# 1. Create a greeting for your program.
 
-# Python variables
-# name = input("What is your name?")
+print("Welcome to Band Name Generator!")
 
-# print(name)
+# 2. Ask the user for the city that they grew up in.
 
-# name = "Angela"
+city = input("What city did you grow up in?\n")
 
-# name = input("What is your name?")
-# length = len(name)
+# 3. Ask the user for the name of a pet.
 
-# print(length)
+pet_name = input("What is the name of your pet?\n")
+
+# 4. Combine the name of their city and pet and show them their band name.
+
+print("Your band name is: " + city + pet_name)
+
+# 5. Make sure the input cursor shows on a new line, see the example at:
+#   https://replit.com/@appbrewery/band-name-generator-end
