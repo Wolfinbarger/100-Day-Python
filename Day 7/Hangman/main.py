@@ -1,5 +1,7 @@
 import random
 
+from hangman_word import word_list
+
 msg_title = """
 
 88
@@ -95,9 +97,6 @@ stages = [output_ascii_hangman_start,
 output_blank = " _ "
 
 
-word_list = ["aardvark", "baboon", "camel"]
-
-
 def choose_word(word_list):
     return random.choice(word_list)
 
@@ -172,6 +171,8 @@ def main():
 
         if check_guess(chosen_word, guess) == True:
 
+            print(stage)
+
             print(add_letter_to_field(chosen_word, guess, word_field))
 
         else:
@@ -180,11 +181,17 @@ def main():
 
             stage = stages[stage_count]
 
-            print(stage)
+            if stage != output_ascii_hangman_left_leg:
 
-            print(f"Word does not contain {guess}\n Try again")
+                print(stage)
+
+                print(word_field)
+
+                print(f"\nWord does not contain {guess}\n Try again")
 
         if ' _ ' not in word_field or stage == output_ascii_hangman_left_leg:
+
+            print(f'Word was: {chosen_word}')
 
             print(output_ascii_hangman_left_leg + "\n\nGAME OVER")
 
