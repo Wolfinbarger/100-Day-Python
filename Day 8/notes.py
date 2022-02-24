@@ -8,6 +8,9 @@
 # greet()
 
 
+from ast import arguments
+
+
 def greet_with_name(name):
 
     print(f"Hello {name}")
@@ -16,3 +19,12 @@ def greet_with_name(name):
 
 
 greet_with_name("Angela")
+
+
+Keyword arguments
+
+
+def my_function(c=3, a=1, b=2):
+  # Do this with a
+  # THen do this with b
+  # Finally do htis wiht c
