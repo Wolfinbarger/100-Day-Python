@@ -5,6 +5,9 @@ def caeser(start_text, shift_amount, cipher_direction):
 
     end_text = ""
 
+    if cipher_direction == "decode":
+        shift_amount *= -1
+
     for letter in start_text:
 
         if letter is ' ':
@@ -12,9 +15,6 @@ def caeser(start_text, shift_amount, cipher_direction):
             continue
 
         position = alphabet.index(letter)
-
-        if cipher_direction == "decode":
-            shift_amount *= -1
 
         new_position = position + shift_amount
 
