@@ -1,6 +1,7 @@
 from art_ascii import title_caeser_cipher
 from encrypt import encrypt
 from decrypt import decrypt
+from caeser import caeser
 
 
 print(title_caeser_cipher + "\n\n")
@@ -12,10 +13,12 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 
-if direction == "encode":
+# if direction == "encode":
 
-    encrypt(plain_text=text, shift_amount=shift)
+#     encrypt(plain_text=text, shift_amount=shift)
 
-else:
+# else:
 
-    decrypt(cipher_text=text, shift_amount=shift)
+#     decrypt(cipher_text=text, shift_amount=shift)
+
+caeser(text, shift, direction)

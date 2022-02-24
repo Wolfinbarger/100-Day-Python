@@ -8,23 +8,23 @@
 # greet()
 
 
-from ast import arguments
+# from ast import arguments
 
 
-def greet_with_name(name):
+# def greet_with_name(name):
 
-    print(f"Hello {name}")
+#     print(f"Hello {name}")
 
-    print(f"How do you do {name}")
-
-
-greet_with_name("Angela")
+#     print(f"How do you do {name}")
 
 
-Keyword arguments
+# greet_with_name("Angela")
 
 
-def my_function(c=3, a=1, b=2):
-  # Do this with a
-  # THen do this with b
-  # Finally do htis wiht c
+# Keyword arguments
+
+
+# def my_function(c=3, a=1, b=2):
+# Do this with a
+# THen do this with b
+# Finally do htis wiht c
