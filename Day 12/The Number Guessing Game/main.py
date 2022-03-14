@@ -10,18 +10,21 @@ hard_attempts = 5
 
 
 def is_correct(player_guess, computer_number):
+    """Checks if player guess is correct"""
     if player_guess == computer_number:
         return True
     return False
 
 
 def set_player_attempts(difficulty):
+    """Sets player attempts"""
     if difficulty == 'easy':
         return easy_attempts
     return hard_attempts
 
 
-def high_or_low(player_guess, computer_number):
+def is_player_high_or_low(player_guess, computer_number):
+    """Checks if player is high or low"""
     if player_guess < computer_number:
         return msg.msg_too_low
     return msg.msg_too_high
@@ -51,7 +54,7 @@ def main():
             break
         else:
             player_attempts -= 1
-            print(high_or_low(player_guess, computer_number))
+            print(is_player_high_or_low(player_guess, computer_number))
             print(msg.msg_guess_again)
             print(
                 f"You have {player_attempts} attempts remaining to guess the number.")
