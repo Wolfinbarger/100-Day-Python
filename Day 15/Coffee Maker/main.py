@@ -1,3 +1,5 @@
+import os
+
 MENU = {
     "espresso": {
         "ingredients": {
@@ -28,7 +30,12 @@ resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
+    "money": 0,
 }
+
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def check_for_off_status(status):
@@ -37,15 +44,20 @@ def check_for_off_status(status):
     return True
 
 
-def main():
-    coffee_machine_power_status = True
-
-    while coffee_machine_power_status is True:
-
-        customer_choice = input(
-            "What would you like? (espresso/latte/cappuccino ").lower()
-
-        coffee_machine_power_status = check_for_off_status(customer_choice)
+def print_report():
+    print("Water: " + str(resources["water"]) + 'ml\n' + "Milk: " + str(resources["milk"]) +
+          "ml\n" + "Coffee: " + str(resources["coffee"]) + "g\n" + "Money: $" + str(resources["money"]))
 
 
-main()
+coffee_machine_power_status = True
+
+while coffee_machine_power_status is True:
+
+    customer_choice = input(
+        "What would you like? (espresso/latte/cappuccino ").lower()
+
+    coffee_machine_power_status = check_for_off_status(customer_choice)
+
+    if customer_choice == 'report':
+        clear_screen()
+        print_report()
