@@ -29,3 +29,23 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
+
+def check_for_off_status(status):
+    if status == 'off':
+        return False
+    return True
+
+
+def main():
+    coffee_machine_power_status = True
+
+    while coffee_machine_power_status is True:
+
+        customer_choice = input(
+            "What would you like? (espresso/latte/cappuccino ").lower()
+
+        coffee_machine_power_status = check_for_off_status(customer_choice)
+
+
+main()
